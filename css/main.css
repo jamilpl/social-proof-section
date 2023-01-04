@@ -9,15 +9,18 @@
   --white: hsl(0, 0%, 100%);
 }
 
-body {
-  font-family: "League Spartan", sans-serif;
-  background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
-  background-repeat: no-repeat no-repeat;
-  background-position: top left, bottom right;
-}
-
 html {
   font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  font-family: "League Spartan", sans-serif;
+  background-image: url("../images/bg-pattern-top-mobile.svg"),
+    url("../images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat no-repeat;
+  background-position: top left, bottom right;
 }
 
 .main {
@@ -28,10 +31,10 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: 
-  "info"
-  "rated"
-  "card";
+  grid-template-areas:
+    "info"
+    "rated"
+    "card";
   gap: 20px;
 }
 
@@ -132,7 +135,8 @@ html {
 
 @media (min-width: 768px) {
   body {
-    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    background-image: url("../images/bg-pattern-top-desktop.svg"),
+      url("../images/bg-pattern-bottom-desktop.svg");
     background-position: top left -100px, bottom right -150px;
   }
 
@@ -141,9 +145,9 @@ html {
     display: grid;
     grid-template-columns: 400px auto;
     grid-template-rows: repeat(2, auto);
-    grid-template-areas: 
-    "info rated"
-    "card card";
+    grid-template-areas:
+      "info rated"
+      "card card";
     gap: 20px;
   }
 
